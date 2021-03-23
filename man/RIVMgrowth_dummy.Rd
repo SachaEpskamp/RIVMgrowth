@@ -37,8 +37,6 @@ Sacha Epskamp <mail@sachaepskamp.com>
 }
 
 \examples{
-# Load needed packages:
-
 # Let's first simulate some data:
 library("lavaan")
 simmodel <- '
