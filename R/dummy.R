@@ -1,6 +1,6 @@
 # This script contains some functions to automate things:
 
-cat("Last updated: 23/03/2021 - 15:14")
+# cat("Last updated: 23/03/2021 - 15:14")
 
 # Function to automize dummy encoding:
 RIVMgrowth_dummy <- function(
@@ -508,7 +508,8 @@ RIVMgrowth_dummy <- function(
     time = time,
     use_predictor = use_predictor,
     n_predictor = nPred,
-    ordered = ordered
+    ordered = ordered,
+    lav_model = model
   )
   class(results) <- "RIVMgrowth_dummy"
   

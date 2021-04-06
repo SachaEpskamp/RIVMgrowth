@@ -1,7 +1,7 @@
 Package: RIVMgrowth
 Type: Package
 Title: Latent Growth Curve Models for the RIVM
-Version: 0.1
+Version: 0.1.1
 Author: Sacha Epskamp & Angelique Cramer
 Maintainer: Sacha Epskamp <mail@sachaepskamp.com>
 Description: Latent Growth Curve Models for the RIVM
