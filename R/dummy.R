@@ -497,6 +497,9 @@ RIVMgrowth_dummy <- function(
   cor_df <- parTable %>% filter(op == "~~", lhs %in% c(intercepts, slopes), rhs %in% c(intercepts, slopes)) %>% 
     select(lhs, op, rhs, est, se, z, pvalue, ci.lower, ci.upper, std.all)
 
+  # Add dummy variable:
+  dummydf <- predictor_summary %>% select(-PREDICTOR)
+  dummydf$dummy <- c(NA,dummyvars)
   
   # Make list:
   results <- list(
@@ -509,7 +512,8 @@ RIVMgrowth_dummy <- function(
     use_predictor = use_predictor,
     n_predictor = nPred,
     ordered = ordered,
-    lav_model = model
+    lav_model = model,
+    dummy = dummydf
   )
   class(results) <- "RIVMgrowth_dummy"
   
